@@ -10,7 +10,6 @@ export const getPosts = async (req, res) => {
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
-    res.send('This Works!');
 }
 
 export const createPost = async (req, res) => {
