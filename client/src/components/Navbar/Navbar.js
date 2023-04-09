@@ -9,8 +9,10 @@ const Navbar = () => {
 
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
-            <Typography className={classes.heading} variant="h2" align="center">Check Out My Pet!</Typography>
-            <img className={classes.image} src={header} alt="header" height="60" />
+            <div className={classes.brandContainer}>
+                <Typography className={classes.heading} variant="h2" align="center">Check Out My Pet!</Typography>
+                <img className={classes.image} src={header} alt="header" height="60" />
+            </div>
         </AppBar>
     )
 }
