@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';    // currently causing app to not render because link cannot be outside router
 import { AppBar, Avatar, Button, Toolbar, Typography } from '@material-ui/core';
 
@@ -7,8 +7,15 @@ import header from '../../images/header.png';
 
 const Navbar = () => {
     const classes = useStyles();
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+    
+    console.log(user);
 
-    const user = null;  // mock user
+    useEffect(() => {
+        const token = user?.token;
+
+        setUser(JSON.parse(localStorage.getItem('profile')));
+    }, [])
 
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
