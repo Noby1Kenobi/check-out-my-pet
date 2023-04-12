@@ -10,6 +10,7 @@ const auth = async (req, res, next) => {
         if (token && isCustomAuth) {
             decodedData = jwt.verify(token, 'test');
 
+            // pass user id to next middleware thru the req (specifically lcrud ops in post.js)
             req.userId = decodedData?.id;
         } else {
             // google token

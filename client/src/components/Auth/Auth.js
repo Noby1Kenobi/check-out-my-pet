@@ -56,7 +56,7 @@ const Auth = () => {
         try {
             dispatch({ type: 'AUTH', data: { result, token } });
 
-            history.pushState('/'); // redirect to home page
+            history.push('/'); // redirect to home page
         } catch (error) {
             console.log(error);
         }
