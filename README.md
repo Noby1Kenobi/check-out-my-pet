@@ -8,3 +8,4 @@ Things to do later:
     - post can be inside of a post-it looking container
     - change header picture to dog or someother pet (hamster?)
     - create modal for new posts instead of having it on the top right
+    - change Form.js form's onChange attribute to one similar to the Auth.js form's onChange attribute which is much cleaner
