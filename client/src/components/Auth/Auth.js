@@ -50,7 +50,7 @@ const Auth = () => {
         const tokenDecoded = jwt_decode(token);
         // console.log(tokenDecoded);
 
-        const result = { name: tokenDecoded.name, email: tokenDecoded.email, imageUrl: tokenDecoded.picture };
+        const result = { name: tokenDecoded.name, email: tokenDecoded.email, imageUrl: tokenDecoded.picture, googleId: tokenDecoded.sub };
         // console.log(authData);
 
         try {

@@ -14,8 +14,8 @@ const Post = ({ post, setCurrentId }) => {
     const classes = useStyles();
     const dispatch = useDispatch();
     const user = JSON.parse(localStorage.getItem('profile'));
+    // console.log(user);
 
-    console.log(user);
     // Like button component
     const Likes = () => {
         if (post.likes.length > 0) {
