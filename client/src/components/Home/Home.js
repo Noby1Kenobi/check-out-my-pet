@@ -41,10 +41,7 @@ const Home = () => {
     const handleDelete = (tagToDelete) => setTags(tags.filter((tag) => tag !== tagToDelete));
 
     const searchPost = () => {
-        // console.log("search: " + typeof(search.trim()));
-        // console.log("tags: " + typeof(tags));
-        if (search.trim() || tags) {        // make sure to check that search.trim !== "" and tags !== []
-            // console.log("dispatching search");
+        if (search.trim() !== "" && tags !== []) {
             dispatch(getPostsBySearch({ search, tags: tags.join(',') }));
             history.push(`/posts/search?searchQuery=${search || 'none'}&tags=${tags.join(',')}`);
         } else {
