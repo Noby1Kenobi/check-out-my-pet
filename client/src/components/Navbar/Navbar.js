@@ -36,10 +36,10 @@ const Navbar = () => {
 
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
-            <div className={classes.brandContainer}>
+            <Link to="/" className={classes.brandContainer}>
                 <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">Check Out My Pet!</Typography>
                 <img className={classes.image} src={header} alt="header" height="60" />
-            </div>
+            </Link>
             <Toolbar className={classes.toolbar}>
                 {user ? (
                     <div className={classes.profile}>
