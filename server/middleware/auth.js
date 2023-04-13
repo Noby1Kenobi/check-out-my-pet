@@ -16,7 +16,7 @@ const auth = async (req, res, next) => {
             // google token
             decodedData = jwt.decode(token);
 
-            req.userId = decodedData?.sub;   // verify later if sub is what we can get
+            req.userId = decodedData?.sub;
         }
 
         next();
