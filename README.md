@@ -9,3 +9,5 @@ Things to do later:
     - change header picture to dog or someother pet (hamster?)
     - create modal for new posts instead of having it on the top right
     - change Form.js form's onChange attribute to one similar to the Auth.js form's onChange attribute which is much cleaner
+    - make the like button a heart or something instead of a thumbs up
+    - create model to confirm to a user if they want to delte a post
