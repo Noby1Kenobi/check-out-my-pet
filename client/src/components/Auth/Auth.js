@@ -4,7 +4,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { GoogleLogin } from '@react-oauth/google';
 // import { useGoogleLogin } from '@react-oauth/google';
 import { useDispatch } from 'react-redux';
-import jwt_decode from 'jwt-decode';
+import decode from 'jwt-decode';
 import { useHistory } from 'react-router-dom';
 import { signin, signup } from '../../actions/auth';
 
@@ -47,7 +47,7 @@ const Auth = () => {
 
     const googleSuccess = async (credentialResponse) => {
         const token = credentialResponse?.credential;
-        const tokenDecoded = jwt_decode(token);
+        const tokenDecoded = decode(token);
         // console.log(tokenDecoded);
 
         const result = { name: tokenDecoded.name, email: tokenDecoded.email, imageUrl: tokenDecoded.picture, googleId: tokenDecoded.sub };
