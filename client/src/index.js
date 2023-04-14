@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-// import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import reducers from './reducers';
 
@@ -13,14 +13,10 @@ import './index.css';
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
-    // for custom google sign in button later?
-    // <GoogleOAuthProvider clientId="72021518476-h1ko693ijohv7bq6cbmp5ivln4vc75ts.apps.googleusercontent.com">
-    //     <Provider store={store}>
-    //         <App />
-    //     </Provider>
-    // </GoogleOAuthProvider>,
-    <Provider store={store}>
-        <App />
-    </Provider>,
+    <GoogleOAuthProvider clientId="72021518476-h1ko693ijohv7bq6cbmp5ivln4vc75ts.apps.googleusercontent.com">
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </GoogleOAuthProvider>,
     document.getElementById('root')
 );
