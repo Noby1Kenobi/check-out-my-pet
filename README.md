@@ -15,3 +15,4 @@ Things to do later:
     - change Form.js form's onChange attribute to one similar to the Auth.js form's onChange attribute which is much cleaner
     - make the like button a heart or something instead of a thumbs up
     - create model to confirm to a user if they want to delte a post
+    - change secret key in jwt token sign function (currenlty just 'test')
