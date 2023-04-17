@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import helmet from 'helmet';
+import compression from 'compression'
 
 import postRoutes from './routes/posts.js';
 import userRoutes from './routes/users.js';
@@ -10,6 +12,8 @@ import userRoutes from './routes/users.js';
 const app = express();
 dotenv.config();
 
+app.use(helmet());
+app.use(compression());
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());

@@ -2,6 +2,8 @@
 A fullstack MERN social media project
 
 Things to do later:
+- deploy using heroku only
+- fix warnings / replace deprecated code
 - one of the states is being passed around with vanilla react, try to move it to react redux (video talks about this state)
 - make custom google sign in button (either with vanilla code or reactoauth/google)
 - fix the edit button as it is now under the buttonbase component which links to a post's detail page
