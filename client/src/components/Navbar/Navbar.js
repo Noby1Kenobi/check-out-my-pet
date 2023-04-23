@@ -6,6 +6,7 @@ import decode from 'jwt-decode';
 
 import useStyles from './styles';
 import header from '../../images/header.png';
+import { LOGOUT } from '../../constants/actionTypes';
 
 const Navbar = () => {
     const classes = useStyles();
@@ -15,7 +16,7 @@ const Navbar = () => {
     const location = useLocation();
     
     const logout = () => {
-        dispatch({ type: 'LOGOUT' });
+        dispatch({ type: LOGOUT });
 
         history.push('/');      // redirect to home page
 
