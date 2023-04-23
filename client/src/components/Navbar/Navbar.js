@@ -17,10 +17,8 @@ const Navbar = () => {
     
     const logout = () => {
         dispatch({ type: LOGOUT });
-
-        history.push('/');      // redirect to home page
-
         setUser(null);
+        history.push('/auth');      // redirect to login page
     };
 
     useEffect(() => {
