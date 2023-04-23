@@ -2,9 +2,10 @@
 A fullstack MERN social media project
 
 Things to do later:
-- deploy using heroku only
+- weird bug if user: logs in, types '/auth', gets redirected to '/posts', logs out, CANNOT get to auth page when clicking sign in unless they refresh the page
 - fix warnings / replace deprecated code
 - one of the states is being passed around with vanilla react, try to move it to react redux (video talks about this state)
+- fix google login
 - make custom google sign in button (either with vanilla code or reactoauth/google)
 - fix the edit button as it is now under the buttonbase component which links to a post's detail page
 - move around elements to make it more unique
