@@ -1,19 +1,21 @@
 # check-out-my-pet
-A fullstack MERN social media project
+A fullstack MERN social media web application.
 
-Things to do later:
-- weird bug if user: logs in, types '/auth', gets redirected to '/posts', logs out, CANNOT get to auth page when clicking sign in unless they refresh the page
-- fix warnings / replace deprecated code
-- one of the states is being passed around with vanilla react, try to move it to react redux (video talks about this state)
-- fix google login
-- make custom google sign in button (either with vanilla code or reactoauth/google)
-- fix the edit button as it is now under the buttonbase component which links to a post's detail page
-- move around elements to make it more unique
-    - post: title on top, then createdat, then picture then message, then like and delete
-    - post can be inside of a post-it looking container
-    - change header picture to dog or someother pet (hamster?)
-    - create modal for new posts instead of having it on the top right
-    - change Form.js form's onChange attribute to one similar to the Auth.js form's onChange attribute which is much cleaner
-    - make the like button a heart or something instead of a thumbs up
-    - create model to confirm to a user if they want to delte a post
-    - change secret key in jwt token sign function (currenlty just 'test')
+## Live Site:
+The website can be seen [here](https://check-out-my-pet-app.onrender.com/posts).
+
+![screenshot of website](https://github.com/Noby1Kenobi/check-out-my-pet/blob/main/public/screenshot.png)
+
+## Features:
+- Create and account and log in
+- Create posts that can contain an image and hashtags
+- Update posts you've already made or delete them
+- Like other people's posts
+- Search for a post based on the text in the post or its hashtags
+- View a detailed page of a post and leave a comment
+
+## Setup:
+- Run `npm i && npm start` in both the client and server directories
+
+## References:
+- Website was made using tutorial by [jsmastery](https://www.youtube.com/watch?v=VsUzmlZfYNg).
