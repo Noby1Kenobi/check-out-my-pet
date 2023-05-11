@@ -18,4 +18,4 @@ The website can be seen [here](https://check-out-my-pet-app.onrender.com/posts).
 - Run `npm i && npm start` in both the client and server directories
 
 ## References:
-- Website was made using tutorial by [jsmastery](https://www.youtube.com/watch?v=VsUzmlZfYNg).
+- Website was made using tutorial by [jsmastery](https://www.jsmastery.pro/)
