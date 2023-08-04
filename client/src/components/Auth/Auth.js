@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import { GoogleLogin } from '@react-oauth/google';
+// import { GoogleLogin } from '@react-oauth/google';
 // import { useGoogleLogin } from '@react-oauth/google';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
@@ -45,25 +45,25 @@ const Auth = () => {
         setShowPassword(false);
     };
 
-    const googleSuccess = async (credentialResponse) => {
-        const token = credentialResponse?.credential;
-        const tokenDecoded = decode(token);
-        // console.log(tokenDecoded);
+    // const googleSuccess = async (credentialResponse) => {
+    //     const token = credentialResponse?.credential;
+    //     const tokenDecoded = decode(token);
+    //     // console.log(tokenDecoded);
 
-        const result = { name: tokenDecoded.name, email: tokenDecoded.email, imageUrl: tokenDecoded.picture, googleId: tokenDecoded.sub };
-        // console.log(authData);
+    //     const result = { name: tokenDecoded.name, email: tokenDecoded.email, imageUrl: tokenDecoded.picture, googleId: tokenDecoded.sub };
+    //     // console.log(authData);
 
-        try {
-            dispatch({ type: 'AUTH', data: { result, token } });
+    //     try {
+    //         dispatch({ type: 'AUTH', data: { result, token } });
 
-            history.push('/'); // redirect to home page
-        } catch (error) {
-            console.log(error);
-        }
-    };
-    const googleError = () => {
-        console.log("Google Sign In was unsuccessful. Try Again Later");
-    };
+    //         history.push('/'); // redirect to home page
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
+    // const googleError = () => {
+    //     console.log("Google Sign In was unsuccessful. Try Again Later");
+    // };
 
     // const login = useGoogleLogin({
     //     onSuccess: tokenResponse => console.log(tokenResponse),
@@ -92,10 +92,10 @@ const Auth = () => {
                         {isSignup ? 'Sign Up' : 'Sign In'}
                     </Button>
                     <div id='signInDiv'></div>
-                    <GoogleLogin
+                    {/* <GoogleLogin
                         onSuccess={googleSuccess}
                         onError={googleError}
-                    />
+                    /> */}
                     {/* <Button className={classes.googleButton} color="primary" fullWidth onClick={() =>  login()} startIcon={<Icon />} variant="contained">
                         Google Sign In
                     </Button> */}
