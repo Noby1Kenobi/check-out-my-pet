@@ -11,4 +11,9 @@ export default makeStyles((theme) => ({
     actionDiv: {
         textAlign: 'center',
     },
+    loadingDiv: {
+        display: 'flex',
+        alignItems: 'center',
+        fontSize: '20px',
+    },
 }));
