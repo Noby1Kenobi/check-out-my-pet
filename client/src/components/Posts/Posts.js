@@ -16,7 +16,7 @@ const Posts = ({ setCurrentId }) => {
             <div className={classes.loadingDiv}>
                 <CircularProgress />
                 <Typography className={classes.smMargin} variant="h6" align="center">
-                    Please be patient as the server takes some time to start up (Approx. 1 min)
+                    Please be patient as the server takes some time to start up (Approx. 3 min)
                 </Typography>
             </div>
             ) : (
